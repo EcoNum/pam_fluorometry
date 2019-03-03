@@ -1,0 +1,37 @@
+---
+title: "Premiers test avec l'Imaging PAM"
+authors: "Engels Guyliann"
+output: html_notebook
+---
+
+```{r}
+SciViews::R
+ip <- read("../../data/rework_data/ip001_ip.rds")
+```
+
+Le traitement des données qui ont permis d'obtenir le fichier ip001_ip.rds ont été réalisé dans un notebook sur l'acquisition des données. Le graphique ci-dessus montre le rendement photosynthétique maximal mesuré après une nuit complète dans le noir.
+Chaque point sur le graphique représente la moyenne d'au moins 10 point de mesure sur les individus monitorés (réplicat technique d'une certaine manière).  Ce premier graphique nous montre cependant que *S. Pistillata* a un rendement photosynthétique plus élevé que *S. hystrix*.  
+
+```{r}
+chart(ip, y_mean ~ date %colour=% as.factor(id) | species) +
+  geom_point() +
+  geom_line()
+
+```
+
+Malgré le fait que la représentation graphique n'est pas optimale en montrant l'écart type des points lié au réplicat technique il met tout de meme en avant que sur une meme individus une certaine variation est obtenue. 
+
+```{r}
+chart(ip, y_mean ~ as.factor(id) %colour=% species) +
+  geom_point() +
+  geom_errorbar(aes(ymin = y_mean - y_sd, ymax = y_mean + y_sd))
+```
+
+L'imaging PAM est employé afin de mettre en avant la présence d'un stress qui influance la photosynthèse. Cependant les questions suivantes doivent trouver une réponse avant de pouvoir employer l'outil :
+
+- Quelle est la variablités intra-individu ?
+- Dans des conditions identiques, quelle est la variabilité intra-espèces.
+- Quel est le seuil définissant que les individus sont stressé ? 
+
+
+
