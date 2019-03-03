@@ -6,7 +6,7 @@ Auteurs / Authors
 -----------------
 
 -   [Engels Guyliann](https://github.com/GuyliannEngels)
--   Batigny Antoine
+-   Antoine Batigny
 
 Directeur / Supervisor
 ----------------------
@@ -16,4 +16,6 @@ Directeur / Supervisor
 Résumé
 ------
 
-TODO
+L'étude des réponses écophysiologiques des coraux à des stress par des méthodes non destructives et en mésocosmes (limite du nombre d'individus), requiert l'utilisation de techniques et d'outils particuliers. La mesure de la fluorescence est l'une de ces techniques. En effet, la fluorescence émise quantifie de manière indirecte la photosynthèse tout comme la production d'oxygène.
+
+Ce projet en est à ces débuts et des notebook d'introduction à l’outil vont suivre prochainement.
