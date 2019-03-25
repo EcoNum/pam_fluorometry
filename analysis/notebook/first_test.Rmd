@@ -16,7 +16,6 @@ Chaque point sur le graphique représente la moyenne d'au moins 10 point de mesu
 chart(ip, y_mean ~ date %colour=% as.factor(id) | species) +
   geom_point() +
   geom_line()
-
 ```
 
 Malgré le fait que la représentation graphique n'est pas optimale en montrant l'écart type des points lié au réplicat technique il met tout de meme en avant que sur une meme individus une certaine variation est obtenue. 
@@ -32,6 +31,4 @@ L'imaging PAM est employé afin de mettre en avant la présence d'un stress qui 
 - Quelle est la variablités intra-individu ?
 - Dans des conditions identiques, quelle est la variabilité intra-espèces.
 - Quel est le seuil définissant que les individus sont stressé ? 
-
-
 
